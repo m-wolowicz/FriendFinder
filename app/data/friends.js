@@ -5,7 +5,7 @@
 // But you could have it be an empty array as well.
 // =============================================================================
 
-var friends = [
+var friendData = [
 	{
 		//Alias Agent Michael Scarn
 		"name": "Agent Michael Scarn",
@@ -70,4 +70,7 @@ var friends = [
 
 // Note how we export the array.
 //This makes it accessible to other files using require. 
-module.exports = friends;
+module.exports = friendData;
+
+// ==== CONSOLE.LOG TESTING ====
+console.log("\nInformation from the friends.js File as friendData:\n" + JSON.stringify(friendData));

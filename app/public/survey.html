@@ -1,5 +1,3 @@
-<!-- Homework Assignment: Friend Finder - Node and Express Servers-->
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -44,13 +42,13 @@
 			<form>
 				<!-- NAME -->
 				<div class="form-group">
-					<label for="name"><h4>Name (Required)</h4> </label>
-					<input type="text" class="form-control" id="name" placeholder="Enter Your Full Name Here">
+					<label for="newFriendName"><h4>Name (Required)</h4> </label>
+					<input type="text" class="form-control" id="newFriendName" placeholder="Enter Your Full Name Here">
 				</div>
 				<!-- LINK TO PHOTO -->
 				<div class="form-group">
-					<label for="photoLink"><h4>Link to Photo Image (Required)</h4></label>
-					<input type="url" class="form-control" id="photoLink" placeholder="Example: http://www.mysite.com/myimage.jpg">
+					<label for="newFriendPhotoLink"><h4>Link to Photo Image (Required)</h4></label>
+					<input type="url" class="form-control" id="newFriendPhotoLink" placeholder="Example: http://www.mysite.com/myimage.jpg">
 				</div>
 
 				<hr>
@@ -256,11 +254,11 @@
 			<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h2 class="modal-title"><strong>Your New Best Famous Friend Is:</strong></h2>
+				<h2 class="modal-title"><strong>Your New Famous Best Friend Is:</strong></h2>
 			</div>
 			<div class="modal-body">
 				<h2 id="bestFriendName"></h2>
-				<img id="bestFriendImg" src="https://blazepress.com/.image/t_share/MTQ0NDM2OTUyMjYxNzk3MTc4/funniest-animal-selfies-ever-13jpg.jpg" alt="">
+				<span id="bestFriendImg"></span>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -276,9 +274,9 @@
 <!--Footer-->
 	<footer class="footer">
 		<div class="container text-center"  id="footer">
-			<a href="/api/friends" style="color:black">Current Friends List (Raw JSON)</a>
+			<a href="/api/friendList" style="color:black">Current Friends List (Raw JSON)</a>
 			|
-			<a href="https://github.com/JettTech" style="color:black">My GitHub Repo</a>
+			<a href="https://github.com/m-wolowicz/FriendFinder" style="color:black">My GitHub Repo</a>
 			<p>© 2018 Melissa Wolowicz.  All Rights Reserved.</p>
 		</div>
 	</footer>
@@ -288,63 +286,81 @@
 <!-- BEGIN JAVASCRIPT -->
 
 	<script type="text/javascript">
+
+		//This function sends the results data to the modal:
+		function displayResults(htmlData, urlData) {
+			$("#bestFriendName").text(htmlData);
+				// ==== CONSOLE.LOG TESTING ====
+				console.log("\n#bestFriendName From survey.html file: \n" + (htmlData));
+
+			$("#bestFriendImg").html(urlData);
+				// ==== CONSOLE.LOG TESTING ====
+				console.log("\n#bestFriendName From survey.html file: \n" + (urlData));
+
+			$(".modal fade").show(800, function() {
+				var timeoutID = window.setTimeout(hideDiv, 8000);
+					// ==== CONSOLE.LOG TESTING ====
+					console.log("\n.modal fade From survey.html file: \n" + timeoutID);
+
+				function hideDiv() {
+					$(".modal fade").hide(800);
+				}
+			});
+		}
 		
 		// Capture the user's input on the form with button on click event
 		$("#submitButton").on("click", function(){
+			event.preventDefault();
 
-			// First Validate the Form's Input
-			function validateForm() {
-				
-				var isValid = true;
-
-				$(".form-control").each(function() {
-					if ( $(this).val() === '' )
-					isValid = false;
-				});
-
-				return isValid;
-			}
-
-			// Check if all required fields are filled
-			if (validateForm() === true) {
-
-				// Create an object for the user's input data
-				var userData = {
-					name: $("#name").val(),
-					photo: $("#photoLink").val(),
-					scores: [	$("#question1").val(),
-								$("#question2").val(), 
-								$("#question3").val(), 
-								$("#question4").val(), 
-								$("#question5").val(), 
-								$("#question6").val(), 
-								$("#question7").val(), 
-								$("#question8").val(), 
-								$("#question9").val(), 
-								$("#question10").val(), ]
+			//Grab the new user's information submitted on the form above:
+			var newFriend = {
+				friendName: $('#newFriendName').val().trim(),
+				friend_photo: $('#newFriendPhotoLink').val().trim(),
+				scores: []
 				};
+				// ==== CONSOLE.LOG TESTING ====
+				console.log("\n#submitButton From survey.html file: " + JSON.stringify(newFriend));
 
-				// Grab the URL of the current page
-				var currentURL = window.location.origin;
+			//For Loop that takes each answe as a number and pushes it into friend object
+			for (var i = 1 ; i <= 10 ; i++) {
+				var newValue = parseInt($("#question" + i).val());
 
-				// AJAX post the data to the friends API. 
-				$.post(currentURL + "/api/friends", userData, function(data){
+				// ==== CONSOLE.LOG TESTING ====
+				console.log("\nFor Loop From survey.html file: " + JSON.stringify(newValue));
 
-					// Grab the result from the AJAX post
-					// So that the best match's name and photo are displayed.
-					$("#bestFriend").text(data.name);
-					$('#bestFriendImage').attr("src", data.photo);
-
-					// Show the modal with the new Best Friend 
-					$("#resultsModal").modal('toggle');
-				});
-
-			} else {
-				//Make sure they fill out the entire form
-				alert("Please fill out all fields before submitting!");
+				newFriend.scores.push(parseInt(newValue));
+				// ==== CONSOLE.LOG TESTING ====
+				console.log("\nFor Loop newFriend.scores From survey.html file: " + JSON.stringify(newFriend.scores));
 			}
-			
-			return false;
+
+			// ==== CONSOLE.LOG TESTING ====
+			console.log("\nThis is our new Friend on the list: " + JSON.stringify(newFriend) + "\n");
+
+			var currentURL = window.location.origin;
+
+			// ==== CONSOLE.LOG TESTING ====
+			console.log("\ncurrentURL var From survey.html file:  " + currentURL + "\n");
+
+			$.post(currentURL + "/api/friendList", newFriend, function(data) {
+
+				// ==== CONSOLE.LOG TESTING ====
+				console.log("\n$.post function From survey.html: currentURL + /api/friendList: " + currentURL + "/api/friendList");
+				console.log("\n$.post function From survey.html: newFriend " + JSON.stringify(newFriend));
+
+				// ==== CONSOLE.LOG TESTING ====
+				console.log("\n$.post function this.friendName from survey.html file:  " + this.friendName);
+				console.log("\n$.post function newFriend.friend_photo from survey.html file:  " + newFriend.friend_photo);
+
+				var sendTheMatch = "Your Best match is " + data.friendName;
+				var sendTheImage = '<img src = "'+ data.friend_photo + '">';
+
+				displayResults(sendTheMatch,sendTheImage);
+
+				// Clear the form when submitting
+				$('#newFriendName').val("");
+				$('#newFriendPhotoLink').val("");
+				
+			});
 		});
 	</script>
 
