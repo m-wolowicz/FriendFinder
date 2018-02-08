@@ -73,4 +73,4 @@ var friendData = [
 module.exports = friendData;
 
 // ==== CONSOLE.LOG TESTING ====
-console.log("\nInformation from the friends.js File as friendData:\n" + JSON.stringify(friendData));
+console.log("\nInformation from the friends.js File as friendData:\n" + JSON.stringify(friendData, null, "   ") + "\n");

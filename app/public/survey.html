@@ -286,7 +286,7 @@
 <!-- BEGIN JAVASCRIPT -->
 
 	<script type="text/javascript">
-
+		
 		//This function sends the results data to the modal:
 		function displayResults(htmlData, urlData) {
 			$("#bestFriendName").text(htmlData);
@@ -318,48 +318,36 @@
 				friend_photo: $('#newFriendPhotoLink').val().trim(),
 				scores: []
 				};
-				// ==== CONSOLE.LOG TESTING ====
-				console.log("\n#submitButton From survey.html file: " + JSON.stringify(newFriend));
 
 			//For Loop that takes each answe as a number and pushes it into friend object
 			for (var i = 1 ; i <= 10 ; i++) {
 				var newValue = parseInt($("#question" + i).val());
-
-				// ==== CONSOLE.LOG TESTING ====
-				console.log("\nFor Loop From survey.html file: " + JSON.stringify(newValue));
-
 				newFriend.scores.push(parseInt(newValue));
-				// ==== CONSOLE.LOG TESTING ====
-				console.log("\nFor Loop newFriend.scores From survey.html file: " + JSON.stringify(newFriend.scores));
 			}
 
-			// ==== CONSOLE.LOG TESTING ====
-			console.log("\nThis is our new Friend on the list: " + JSON.stringify(newFriend) + "\n");
-
 			var currentURL = window.location.origin;
-
-			// ==== CONSOLE.LOG TESTING ====
-			console.log("\ncurrentURL var From survey.html file:  " + currentURL + "\n");
 
 			$.post(currentURL + "/api/friendList", newFriend, function(data) {
 
 				// ==== CONSOLE.LOG TESTING ====
-				console.log("\n$.post function From survey.html: currentURL + /api/friendList: " + currentURL + "/api/friendList");
-				console.log("\n$.post function From survey.html: newFriend " + JSON.stringify(newFriend));
+				console.log(	"\nAfter the $.post function from the survey.html file," +
+								"\nThis is the new friend created by user input that is now on our list of friends gathered from newFriend:  \n" + 
+								JSON.stringify(newFriend) + "\n");
 
-				// ==== CONSOLE.LOG TESTING ====
-				console.log("\n$.post function this.friendName from survey.html file:  " + this.friendName);
-				console.log("\n$.post function newFriend.friend_photo from survey.html file:  " + newFriend.friend_photo);
+				console.log(	"\n=============================================================================" +
+								"\nHELP" + 
+								"\n=============================================================================" +
+								"\nI DO NOT KNOW HOW TO GET THIS INTO THE FRIENDS ARRAY ON friends.js FROM HERE" + 
+								"\nI DO NOT KNOW HOW TO FE THE BEST MATCH VARIABLE (chosenMatch), which is working," +
+								"\nfrom the apiRoutes.js file INTO THIS FILE, and displayed into the modal :("
+								);
+
+				
 
 				var sendTheMatch = "Your Best match is " + data.friendName;
 				var sendTheImage = '<img src = "'+ data.friend_photo + '">';
 
 				displayResults(sendTheMatch,sendTheImage);
-
-				// Clear the form when submitting
-				$('#newFriendName').val("");
-				$('#newFriendPhotoLink').val("");
-				
 			});
 		});
 	</script>

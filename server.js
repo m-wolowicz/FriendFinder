@@ -25,6 +25,9 @@
 	app.use(bodyParser.text());
 	app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
+	// Uses any static files required by the html files.
+	app.use(express.static('app/public/'));
+
 
 // =============================================================================
 // ROUTER

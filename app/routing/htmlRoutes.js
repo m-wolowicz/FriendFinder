@@ -20,7 +20,7 @@
 			res.sendFile(path.join(__dirname + '/../public/index.html'));
 
 			// ==== CONSOLE.LOG TESTING ====
-			console.log("The app.get '/' function in the htmlRoutes.js file goes to: +\n" + path.join(__dirname + '/../public/index.html'));
+			console.log("The app.get '/' function in the htmlRoutes.js file goes to: +\n" + path.join(__dirname + '/../public/index.html\n'));
 
 
 		});
@@ -28,7 +28,7 @@
 		app.get('/survey', function(req, res){
 			res.sendFile(path.join(__dirname + '/../public/survey.html'));
 			// ==== CONSOLE.LOG TESTING ====
-			console.log("The app.get '/survey' function in the htmlRoutes.js file goes to: +\n" + path.join(__dirname + '/../public/survey.html'));
+			console.log("The app.get '/survey' function in the htmlRoutes.js file goes to: +\n" + path.join(__dirname + '/../public/survey.html\n'));
 		});
 
 	}; //End of module.exports = function (app)

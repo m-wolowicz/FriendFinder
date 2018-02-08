@@ -76,7 +76,7 @@ console.log("\nThe apiRoutes.js file is working!!!");
 
 				res.json(chosenMatch);
 					// ==== CONSOLE.LOG TESTING ====
-					console.log("Variable chosenMatch 3 in apiRoutes.js File is : " + JSON.stringify(chosenMatch));
+					console.log("\nHERE IS THE BEST FAMOUS FRIEND MATCH Variable chosenMatch 3 in apiRoutes.js File is : " + JSON.stringify(chosenMatch) + "\n");
 
 
 				friendData.push(req.body);
