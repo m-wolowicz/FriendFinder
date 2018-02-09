@@ -1,87 +1,89 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<!-- Setting the View-port -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Setting the View-port -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Linking jQuery CDN -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Linking jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-	<!-- Latest compiled and minified CSS BOOTSTRAP-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-	<!-- Linking my own CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Linking my own CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-	<!-- Linking Google Web Fonts -->
+    <!-- Linking Google Web Fonts -->
 
 
-	<title>Famous Friend Finder | Survey</title>
+    <title>Famous Friend Finder | Survey</title>
 
 </head>
+
 <body>
-<!-- JUMBOTRON -->
-	<div class="jumbotron" id="jumbotronSurvey">
-		<div class="container text-center">
-			<h1>Famous Friend Finder</h1>
-			<h2>Survey Questions</h2>
-		</div>
-	</div>
-<!-- End Jumbotron -->
+    <!-- JUMBOTRON -->
+    <div class="jumbotron" id="jumbotronSurvey">
+        <div class="container text-center">
+            <h1>Famous Friend Finder</h1>
+            <h2>Survey Questions</h2>
+        </div>
+    </div>
+    <!-- End Jumbotron -->
 
-<!-- Main Page Content -->
-	<div class="container-fluid">
-		<div class="container">
-			<h3>About You</h3>
-			<form>
-				<!-- NAME -->
-				<div class="form-group">
-					<label for="newFriendName"><h4>Name (Required)</h4> </label>
-					<input type="text" class="form-control" id="newFriendName" placeholder="Enter Your Full Name Here">
-				</div>
-				<!-- LINK TO PHOTO -->
-				<div class="form-group">
-					<label for="newFriendPhotoLink"><h4>Link to Photo Image (Required)</h4></label>
-					<input type="url" class="form-control" id="newFriendPhotoLink" placeholder="Example: http://www.mysite.com/myimage.jpg">
-				</div>
+    <!-- Main Page Content -->
+    <div class="container-fluid">
+        <div class="container">
+            <h3>About You</h3>
+            <form>
+                <!-- NAME -->
+                <div class="form-group">
+                    <label for="newFriendName"><h4>Name (Required)</h4> </label>
+                    <input type="text" class="form-control" id="newFriendName" placeholder="Enter Your Full Name Here">
+                </div>
+                <!-- LINK TO PHOTO -->
+                <div class="form-group">
+                    <label for="newFriendPhotoLink"><h4>Link to Photo Image (Required)</h4></label>
+                    <input type="url" class="form-control" id="newFriendPhotoLink" placeholder="Example: http://www.mysite.com/myimage.jpg">
+                </div>
 
-				<hr>
+                <hr>
 
-				<h3>Instructions</h3>
+                <h3>Instructions</h3>
 
-				<p>You will be given a different statement for each question. Please select the number that represents the level for what extent do you agree or disagree with the statement given, as follows:</p>
+                <p>You will be given a different statement for each question. Please select the number that represents the level for what extent do you agree or disagree with the statement given, as follows:</p>
 
-				<div class="row">
-					<div class="col-xs-2">
-							<p>1<br>(Strongly Disagree)</p>
-					</div>
-					<div class="col-xs-2">
-							<p>2 <br>(Somewhat Disagree)</p>
-					</div>
-					<div class="col-xs-2">
-							<p>3 <br>(Neither Disagree Nor Agree - Neutral)</p>
-					</div>
-					<div class="col-xs-2">
-							<p>4 <br>(Somewhat Agree)</p>
-					</div>
-					<div class="col-xs-2">
-							<p>5 <br>(Strongly Agree)</p>
-					</div>
-				</div>
+                <div class="row">
+                    <div class="col-xs-2">
+                        <p>1<br>(Strongly Disagree)</p>
+                    </div>
+                    <div class="col-xs-2">
+                        <p>2 <br>(Somewhat Disagree)</p>
+                    </div>
+                    <div class="col-xs-2">
+                        <p>3 <br>(Neither Disagree Nor Agree - Neutral)</p>
+                    </div>
+                    <div class="col-xs-2">
+                        <p>4 <br>(Somewhat Agree)</p>
+                    </div>
+                    <div class="col-xs-2">
+                        <p>5 <br>(Strongly Agree)</p>
+                    </div>
+                </div>
 
-				<hr>
+                <hr>
 
-				<!-- QUESTION 1 -->
-				<div class="form-group">
-					<h3>Question 1</h3>
-					<h4>You find it difficult to introduce yourself to other people.</h4>
-					<select class="form-control" id="question1">
+                <!-- QUESTION 1 -->
+                <div class="form-group">
+                    <h3>Question 1</h3>
+                    <h4>You find it difficult to introduce yourself to other people.</h4>
+                    <select class="form-control" id="question1">
 						<option value="" style="display:none">Select one of the following options</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -89,13 +91,13 @@
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>
-				</div>
+                </div>
 
-				<!-- QUESTION 2 -->
-				<div class="form-group">
-					<h3>Question 2</h3>
-					<h4>You often get so lost in thoughts that you ignore or forget your surroundings.</h4>
-					<select class="form-control" id="question2">
+                <!-- QUESTION 2 -->
+                <div class="form-group">
+                    <h3>Question 2</h3>
+                    <h4>You often get so lost in thoughts that you ignore or forget your surroundings.</h4>
+                    <select class="form-control" id="question2">
 						<option value="" style="display:none">Select one of the following options</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -103,13 +105,13 @@
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>
-				</div>
+                </div>
 
-				<!-- QUESTION 3 -->
-				<div class="form-group">
-					<h3>Question 3</h3>
-					<h4>You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.</h4>
-					<select class="form-control" id="question3">
+                <!-- QUESTION 3 -->
+                <div class="form-group">
+                    <h3>Question 3</h3>
+                    <h4>You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.</h4>
+                    <select class="form-control" id="question3">
 						<option value="" style="display:none">Select one of the following options</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -117,13 +119,13 @@
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>
-				</div>
+                </div>
 
-				<!-- QUESTION 4 -->
-				<div class="form-group">
-					<h3>Question 4</h3>
-					<h4>You find it easy to stay relaxed even when there is some pressure.</h4>
-					<select class="form-control" id="question4">
+                <!-- QUESTION 4 -->
+                <div class="form-group">
+                    <h3>Question 4</h3>
+                    <h4>You find it easy to stay relaxed even when there is some pressure.</h4>
+                    <select class="form-control" id="question4">
 						<option value="" style="display:none">Select one of the following options</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -131,13 +133,13 @@
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>
-				</div>
+                </div>
 
-				<!-- QUESTION 5 -->
-				<div class="form-group">
-					<h3>Question 5</h3>
-					<h4>You feel superior to other people.</h4>
-					<select class="form-control" id="question5">
+                <!-- QUESTION 5 -->
+                <div class="form-group">
+                    <h3>Question 5</h3>
+                    <h4>You feel superior to other people.</h4>
+                    <select class="form-control" id="question5">
 						<option value="" style="display:none">Select one of the following options</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -145,13 +147,13 @@
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>
-				</div>
+                </div>
 
-				<!-- QUESTION 6 -->
-				<div class="form-group">
-					<h3>Question 6</h3>
-					<h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-					<select class="form-control" id="question6">
+                <!-- QUESTION 6 -->
+                <div class="form-group">
+                    <h3>Question 6</h3>
+                    <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                    <select class="form-control" id="question6">
 						<option value="" style="display:none">Select one of the following options</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -159,13 +161,13 @@
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>
-				</div>
+                </div>
 
-				<!-- QUESTION 7 -->
-				<div class="form-group">
-					<h3>Question 7</h3>
-					<h4>You are usually highly motivated and energetic.</h4>
-					<select class="form-control" id="question7">
+                <!-- QUESTION 7 -->
+                <div class="form-group">
+                    <h3>Question 7</h3>
+                    <h4>You are usually highly motivated and energetic.</h4>
+                    <select class="form-control" id="question7">
 						<option value="" style="display:none">Select one of the following options</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -173,13 +175,13 @@
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>
-				</div>
+                </div>
 
-				<!-- QUESTION 8 -->
-				<div class="form-group">
-					<h3>Question 8</h3>
-					<h4>You consider yourself more practical than creative.</h4>
-					<select class="form-control" id="question8">
+                <!-- QUESTION 8 -->
+                <div class="form-group">
+                    <h3>Question 8</h3>
+                    <h4>You consider yourself more practical than creative.</h4>
+                    <select class="form-control" id="question8">
 						<option value="" style="display:none">Select one of the following options</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -187,13 +189,13 @@
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>
-				</div>
+                </div>
 
-				<!-- QUESTION 9 -->
-				<div class="form-group">
-					<h3>Question 9</h3>
-					<h4>You do not mind being at the center of attention.</h4>
-					<select class="form-control" id="question9">
+                <!-- QUESTION 9 -->
+                <div class="form-group">
+                    <h3>Question 9</h3>
+                    <h4>You do not mind being at the center of attention.</h4>
+                    <select class="form-control" id="question9">
 						<option value="" style="display:none">Select one of the following options</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -201,13 +203,13 @@
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>
-				</div>
-	
-				<!-- QUESTION 10 -->
-				<div class="form-group">
-					<h3>Question 10</h3>
-					<h4>You do not let other people influence your actions.</h4>
-					<select class="form-control" id="question10">
+                </div>
+
+                <!-- QUESTION 10 -->
+                <div class="form-group">
+                    <h3>Question 10</h3>
+                    <h4>You do not let other people influence your actions.</h4>
+                    <select class="form-control" id="question10">
 						<option value="" style="display:none">Select one of the following options</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -215,10 +217,10 @@
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>
-				</div>
+                </div>
 
-				<!-- QUESTION 11 JUST A TEST -->
-				<!-- <div class="form-group">
+                <!-- QUESTION 11 JUST A TEST -->
+                <!-- <div class="form-group">
 					<h3>Question 11</h3>
 					<h4>Your question here.</h4>
 					<div class="radio" id="question11">
@@ -240,120 +242,113 @@
 					</div> 
 				</div> -->
 
-				<!-- SUBMIT BUTTON -->
-				<button type="submit" class="btn btn-default" id="submitButton">Submit</button>
+                <!-- SUBMIT BUTTON -->
+                <button type="submit" class="btn btn-default" id="submitButton">Submit</button>
 
-			</form>
-		</div> <!-- End Container -->
-	</div> <!-- End Container Fluid -->
+            </form>
+        </div>
+        <!-- End Container -->
+    </div>
+    <!-- End Container Fluid -->
 
-	<!-- BEGIN MODAL -->
-	<div id="resultsModal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<!-- Modal content-->
-			<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h2 class="modal-title"><strong>Your New Famous Best Friend Is:</strong></h2>
-			</div>
-			<div class="modal-body">
-				<h2 id="bestFriendName"></h2>
-				<span id="bestFriendImg"></span>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			</div>
-			</div>
+    <!-- BEGIN MODAL -->
+    <div id="resultsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><strong>Your New Famous Best Friend Is:</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="bestFriendName"></h2>
+                    <img id="bestFriendImg" src="https://github.com/" alt="Your Match's Image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MODAL -->
 
-		</div>
-	</div>
-	<!-- END MODAL -->
+    <!-- End Main Page Content -->
 
-<!-- End Main Page Content -->
+    <!--Footer-->
+    <footer class="footer">
+        <div class="container text-center" id="footer">
+            <a href="/api/friendList" style="color:black">Current Friends List (Raw JSON)</a> |
+            <a href="https://github.com/m-wolowicz/FriendFinder" style="color:black">My GitHub Repo</a>
+            <p>© 2018 Melissa Wolowicz. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!--  End Footer -->
 
-<!--Footer-->
-	<footer class="footer">
-		<div class="container text-center"  id="footer">
-			<a href="/api/friendList" style="color:black">Current Friends List (Raw JSON)</a>
-			|
-			<a href="https://github.com/m-wolowicz/FriendFinder" style="color:black">My GitHub Repo</a>
-			<p>© 2018 Melissa Wolowicz.  All Rights Reserved.</p>
-		</div>
-	</footer>
-<!--  End Footer -->
+    <!-- ================ -->
+    <!-- BEGIN JAVASCRIPT -->
 
-<!-- ================ -->
-<!-- BEGIN JAVASCRIPT -->
+    <script type="text/javascript">
+        //This function sends the results data to the modal:
+        function displayResults(htmlData, urlData) {
+            $("#bestFriendName").text(htmlData);
+            // ==== CONSOLE.LOG TESTING ====
+            console.log("\n#bestFriendName From survey.html file: \n" + (htmlData));
 
-	<script type="text/javascript">
-		
-		//This function sends the results data to the modal:
-		function displayResults(htmlData, urlData) {
-			$("#bestFriendName").text(htmlData);
-				// ==== CONSOLE.LOG TESTING ====
-				console.log("\n#bestFriendName From survey.html file: \n" + (htmlData));
+            $("#bestFriendImg").attr("src", urlData);
+            // ==== CONSOLE.LOG TESTING ====
+            console.log("\n#bestFriendName From survey.html file: \n" + (urlData));
 
-			$("#bestFriendImg").html(urlData);
-				// ==== CONSOLE.LOG TESTING ====
-				console.log("\n#bestFriendName From survey.html file: \n" + (urlData));
+            $("#resultsModal").show(800, function() {
+                var timeoutID = window.setTimeout(hideDiv, 8000);
+                // ==== CONSOLE.LOG TESTING ====
+                console.log("\n#resultsModal From survey.html file: \n" + timeoutID);
 
-			$(".modal fade").show(800, function() {
-				var timeoutID = window.setTimeout(hideDiv, 8000);
-					// ==== CONSOLE.LOG TESTING ====
-					console.log("\n.modal fade From survey.html file: \n" + timeoutID);
+                function hideDiv() {
+                    $("#resultsModal").hide(800);
+                }
+            });
+        }
 
-				function hideDiv() {
-					$(".modal fade").hide(800);
-				}
-			});
-		}
-		
-		// Capture the user's input on the form with button on click event
-		$("#submitButton").on("click", function(){
-			event.preventDefault();
+        // Capture the user's input on the form with button on click event
+        $("#submitButton").on("click", function() {
+            event.preventDefault();
 
-			//Grab the new user's information submitted on the form above:
-			var newFriend = {
-				friendName: $('#newFriendName').val().trim(),
-				friend_photo: $('#newFriendPhotoLink').val().trim(),
-				scores: []
-				};
+            //Grab the new user's information submitted on the form above:
+            var newFriend = {
+                friendName: $('#newFriendName').val().trim(),
+                friend_photo: $('#newFriendPhotoLink').val().trim(),
+                scores: []
+            };
 
-			//For Loop that takes each answe as a number and pushes it into friend object
-			for (var i = 1 ; i <= 10 ; i++) {
-				var newValue = parseInt($("#question" + i).val());
-				newFriend.scores.push(parseInt(newValue));
-			}
+            //For Loop that takes each answe as a number and pushes it into friend object
+            for (var i = 1; i <= 10; i++) {
+                var newValue = parseInt($("#question" + i).val());
+                newFriend.scores.push(parseInt(newValue));
+            }
 
-			var currentURL = window.location.origin;
+            var currentURL = window.location.origin;
 
-			$.post(currentURL + "/api/friendList", newFriend, function(data) {
+            $.post(currentURL + "/api/friendList", newFriend, function(data) {
 
-				// ==== CONSOLE.LOG TESTING ====
-				console.log(	"\nAfter the $.post function from the survey.html file," +
-								"\nThis is the new friend created by user input that is now on our list of friends gathered from newFriend:  \n" + 
-								JSON.stringify(newFriend) + "\n");
+                // ==== CONSOLE.LOG TESTING ====
+                console.log("\nAfter the $.post function from the survey.html file," +
+                    "\nThis is the new friend created by user input that is now on our list of friends gathered from newFriend:  \n" +
+                    JSON.stringify(newFriend) + "\n");
 
-				console.log(	"\n=============================================================================" +
-								"\nHELP" + 
-								"\n=============================================================================" +
-								"\nI DO NOT KNOW HOW TO GET THIS INTO THE FRIENDS ARRAY ON friends.js FROM HERE" + 
-								"\nI DO NOT KNOW HOW TO FE THE BEST MATCH VARIABLE (chosenMatch), which is working," +
-								"\nfrom the apiRoutes.js file INTO THIS FILE, and displayed into the modal :("
-								);
+                console.log("This is what we are looking for: " + JSON.stringify(data));
 
-				
+                var sendTheMatch = "Your Best match is " + data.name;
+                var sendTheImage = data.photo;
+                console.log(sendTheImage);
 
-				var sendTheMatch = "Your Best match is " + data.friendName;
-				var sendTheImage = '<img src = "'+ data.friend_photo + '">';
+                displayResults(sendTheMatch, sendTheImage);
+            });
+        });
+    </script>
 
-				displayResults(sendTheMatch,sendTheImage);
-			});
-		});
-	</script>
-
-<!-- END JAVASCRIPT -->
-<!-- ============== -->
+    <!-- END JAVASCRIPT -->
+    <!-- ============== -->
 
 </body>
+
 </html>
